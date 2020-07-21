@@ -1,5 +1,4 @@
 import java.util.*;
-
 // @lc code=start
 /* *
  * Definition for singly-linked list.
@@ -13,6 +12,17 @@ import java.util.*;
  * 445.两数相加-ii
  */
 class AddTwoNumzbersII {
+
+    public class ListNode {
+
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
+    }
+
     public static void main(String[] args) {
         
     }
