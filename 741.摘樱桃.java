@@ -6,15 +6,15 @@
 
 // @lc code=start
 import java.util.*;
-class cherryPickup {
+class CherryPickup {
     public static void main(String[] args) {
-        cherryPickup sl = new cherryPickup();
+        CherryPickup sl = new CherryPickup();
         int[][] grid = {
             {0,1,-1},
             {1,0,-1},
             {1,1,1}
         };
-        System.out.println(sl.cherryPickup1(grid));
+        System.out.println(sl.cherryPickup(grid));
     }
 
     /**
