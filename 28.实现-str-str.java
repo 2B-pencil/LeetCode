@@ -32,7 +32,7 @@ class StrStr {
 
 class StrStr2Solution {
     // function to convert character to integer
-    public int charToInt(int idx, String s) {
+    public int char2Int(int idx, String s) {
       return (int)s.charAt(idx) - (int)'a';
     }
   
@@ -48,8 +48,8 @@ class StrStr2Solution {
       // compute the hash of strings haystack[:L], needle[:L]
       long h = 0, ref_h = 0;
       for (int i = 0; i < L; ++i) {
-        h = (h * a + charToInt(i, haystack)) % modulus;
-        ref_h = (ref_h * a + charToInt(i, needle)) % modulus;
+        h = (h * a + char2Int(i, haystack)) % modulus;
+        ref_h = (ref_h * a + char2Int(i, needle)) % modulus;
       }
       if (h == ref_h) return 0;
   
@@ -59,8 +59,8 @@ class StrStr2Solution {
   
       for (int start = 1; start < n - L + 1; ++start) {
         // compute rolling hash in O(1) time
-        h = (h * a - charToInt(start - 1, haystack) * aL
-                + charToInt(start + L - 1, haystack)) % modulus;
+        h = (h * a - char2Int(start - 1, haystack) * aL
+                + char2Int(start + L - 1, haystack)) % modulus;
         if (h == ref_h) return start;
       }
       return -1;
